@@ -97,6 +97,78 @@ public class Main
       }
   }
 
+  public static void problemSeven()
+  {
+      Scanner scan = new Scanner(System.in);
+      int grade;
+      int max = 0, min = 0;
+
+      System.out.println("Enter grade: ");
+      grade = scan.nextInt();
+      min = grade;
+
+      for(int i = 0; i < 6; i++)
+      {
+          System.out.println("Enter grade: ");
+          grade = scan.nextInt();
+          if(min > grade)
+          {
+              min = grade;
+          }
+
+          if(max < grade)
+          {
+              max = grade;
+          }
+      }
+
+      System.out.println("Lowest grade: " + min);
+      System.out.println("Highest grade: " + max);
+  }
+
+
+
+    public static boolean problemEight(int n) {
+        int a = 0, b = 1;
+        int temp;
+        while (a < n) {
+            temp = a;
+            a = b;
+            b = temp + b;
+        }
+
+        return a == n;
+    }
+
+    public static void problemNine(int a, int b)
+    {
+        int result = 0;
+        for(int i = 0; i < b; i++)
+        {
+            result += a;
+        }
+
+        System.out.println("Result: " + result);
+    }
+
+
+    public static void problemTen(int height) {
+        for(int i = 1; i <= height; i++) {
+
+            for(int j = 0; j < height - i; j++) {
+                System.out.print(" ");
+            }
+
+            // Print stars
+            for (int k = 1; k < 2 * i; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+
   public static void main(String[] args)
   {
       Scanner scan = new Scanner(System.in);
@@ -123,5 +195,36 @@ public class Main
 //      System.out.println(problemFive(num));
 
 //      problemSix(); //שאלה 6
+
+
+//      problemSeven(); //שאלה 7
+
+
+
+//      System.out.println("Enter num: "); //שאלה 8
+//      int num = scan.nextInt();
+//      if (problemEight(num)) {
+//          System.out.println("The number is in the fibonacci series.");
+//      }
+//      else
+//      {
+//          System.out.println("The number isn't in the fibonacci series.");
+//      }
+
+
+//        System.out.println("Enter first num: "); //שאלה 9
+//        int a = scan.nextInt();
+//        System.out.println("Enter second num: ");
+//        int b = scan.nextInt();
+//        problemNine(a, b);
+
+
+
+//      System.out.println("Enter triangle height: "); //שאלה 10
+//      int height = scan.nextInt();
+//      problemTen(height);
+
+
+
   }
 }
